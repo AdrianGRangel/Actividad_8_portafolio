@@ -41,12 +41,18 @@ header .container-text .text{
 }
 
 header .container-text .text h1,
-header .container-text .text h2,
-header .container-text .text button{
-    color:aliceblue;
+header .container-text .text h2{
+    color:tomato;
     font-weight: 300;
     margin: 0;
 }
+
+header .container-text .text button{
+    color:green;
+    font-weight: 500;
+    margin: 0;
+}
+
 
 header .container-text .text .name{
     margin-bottom: 10px;
@@ -97,4 +103,47 @@ footer{
 }
 .container{
     background: lightcyan;
+}
+
+main .container{
+    overflow: visible;
+}
+
+main #section-about {
+    text-align: center;
+}
+
+main #section-about .photo {
+    margin-top: -100px;
+}
+
+main #section-about .photo img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    vertical-align: top;
+    border: 5px solid gray;
+}
+
+main #section-about .text {
+    color: gray;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 30px;
+    width: 80%;
+    margin: 40px auto 60px auto;
+}
+
+main #section-anout .text .title{
+    font-size: 34px;
+    margin-bottom: 40px;
+    line-height: 34px;
+    font-weight: 300;
+    color:brown;
+    text-align: center;
+}
+
+main #section-about .text .bold{
+    color: cornflowerblue;
+    text-decoration: underline;
 }
