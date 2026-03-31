@@ -1,50 +1,59 @@
+
+
 header{
-    background-image: linear-gradient(black 30%, gray 90%);
-    background-size: 60%;
-    max-height: 600px;
+    background-image: linear-gradient(135deg, #000 30%, #333 100%);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header .menu{
-    margin: 40px;
+    margin: 20px;
     text-align: center;
 }
 
 header .menu a{
     background: skyblue;
-    margin: 0 20px;
-    color:aliceblue;
-    padding: 9px;
+    margin: 0 10px;
+    color:#1e2838;
+    padding: 10px 20px;
     font-size: 1em;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 2px solid transparent;
+    border-bottom: 25px;
+    transition: all 0.3s ease;
+    font-weight: 600;
 }
 
 header .menu a:hover{
+    background: aliceblue;
+    transform: translateY(-2px);
     border-bottom: 2px soild aliceblue;
 }
 
 header .container-text{
+    flex-grow:1;
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 100px 0 150px;
+    margin: 40px 20px;
 }
 
 header .container-text .text{
-    background-color: black;
-    border: 2px solid red;
-    border-radius: 3px;
-    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 99, 71, 0.3);
+    border-radius: 15px;
     text-align:center;
-    padding: 20px 60px;
+    padding: 40px;
+/*    backdrop-filter: blur(5px); */
 }
 
 header .container-text .text h1,
 header .container-text .text h2{
     color:tomato;
-    font-weight: 300;
-    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 header .container-text .text button{
@@ -61,9 +70,11 @@ header .container-text .text .name{
 }
 
 header .container-text .text .progession{
-    font-size: 25px;
-    line-height: 20px;
-    margin-bottom: 40px;
+    color: #ccc;
+    font-size: 1.2rem;
+    /*line-height: 20px; */
+    margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
 header .container-text .text .btn-cv{
@@ -95,14 +106,17 @@ header .container-text .text .btn-cv:hover{
 
 
 main{
-    background-color: black;
+    background-color: #0f0f0f;
+    color:white;
 }
 
 footer{
     background-color: blue;
 }
 .container{
-    background: lightcyan;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 main .container{
@@ -110,6 +124,7 @@ main .container{
 }
 
 main #section-about {
+    padding: 100px 0;
     text-align: center;
 }
 
@@ -118,25 +133,28 @@ main #section-about .photo {
 }
 
 main #section-about .photo img{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    vertical-align: top;
-    border: 5px solid gray;
+    border: 4px solid tomato;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 main #section-about .text {
-    color: gray;
+    color: #bbb;
     font-weight: 600;
     font-size: 1em;
-    line-height: 30px;
+    line-height: 1.8;
     width: 80%;
-    margin: 40px auto 60px auto;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
-main #section-anout .text .title{
-    font-size: 34px;
-    margin-bottom: 40px;
+main #section-about .text .title{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
     line-height: 34px;
     font-weight: 300;
     color:brown;
@@ -144,6 +162,226 @@ main #section-anout .text .title{
 }
 
 main #section-about .text .bold{
-    color: cornflowerblue;
+    color: #bbb;
     text-decoration: underline;
+}
+
+main #section-jobs {
+    background-color: #1a1a1a;
+    padding: 80px 0;
+}
+
+main #section-jobs .container{
+    overflow: hidden;
+}
+
+main #section-jobs .title{
+    font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 60px;
+    font-weight: 300;
+    color:brown;
+    text-align: center;
+}
+
+main #section-jobs .container-jobs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main #section-jobs .container-jobs .job{
+    width: 23%;
+    padding: 0px 0px 15px 0px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px black;
+    transition: all 0.25s;
+}
+
+main #section-jobs .container-jobs .job .img-job{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+main #section-jobs .container-jobs .job .img-job img{
+    vertical-align: top;
+    width: 100%;
+}
+
+main #section-jobs .container-jobs .job:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px black;
+}
+
+main #section-jobs .container-jobs .job .description {
+    text-align: center;
+}
+
+main #section-jobs .container-jobs .job .description .name {
+    font-weight: 700;
+    color:aquamarine;
+    margin-bottom: 10px;
+}
+
+main #section-jobs .container-jobs .job .description .category {
+    font-size: 14px;
+    color: gray;
+}
+
+/*Habilidades*/
+
+main #section-skills{
+    padding: 60px 0;
+    margin-bottom: 20px;
+}
+
+main #section-skills .container{
+    overflow: hidden;
+}
+
+main #section-skills .title{
+    font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 60px;
+    font-weight: 300;
+    color:coral;
+    text-align: center;
+}
+
+main #section-skills .container-skills{
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main #section-skills .container-skills .skill{
+    margin: clamp(5px, 5px, 10px);
+    display: flex;
+    align-items: justify-content;
+    width: 23%;
+}
+
+main #section-skills .container-skills .skill .icon-skill{
+    padding: 0px 5px;
+    width: 50%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+main #section-skills .container-skills .skill .icon-skill i{
+    width: 100%;
+    font-size: 40px;
+    transition: all 0.75s;
+}
+
+main #section-skills .container-skills .skill .icon-skill i:hover{
+    transform: rotate(360deg);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+footer{
+    background: gainsboro;
+    color:brown;
+    padding: 0px 0px;
+}
+
+footer #section-contact{
+    padding: 60px 0px;
+}
+
+footer #section-contact .title{
+    font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 60px;
+    font-weight: 300;
+    color:brown;
+    text-align: center;
+}
+
+footer #section-contect .form-menssage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer #section-contact .form-menssage input[type="text"],
+footer #section-contact .form-menssage input[type="email"],
+footer #section-contact .form-menssage textarea {
+    border:2px solid beige;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 20px;
+    color:bisque;
+}
+
+footer #section-contact .form-menssage input[type="text"],
+footer #section-contact .form-menssage input[type="email"]{
+width: 49%;
+margin-bottom: 15px;
+}
+
+footer #section-contact .form-menssage textarea {
+width: 100%;
+height: 100px;
+min-width: 100%;
+margin-bottom: 15px;
+min-height: 100px;
+max-height: 300px;
+}
+
+footer #section-contact .form-menssage .btn-send-msg{
+    margin:auto;
+    background: green;
+    color: azure;
+    border:none;
+    border-radius: 3px;
+    padding: 15px 40px;
+}
+
+footer #section-contact .form-menssage .btn-send-msg:hover{
+    background:rgb(0, 224, 0);
+}
+
+footer #section-socialMedia{
+    background-image: linear-gradient(#1e2838 50%, #3c5171 90%);
+    padding: 60px 0;
+}
+
+footer #section-socialMedia .container {
+    display: flex;
+    justify-content: center;
+}
+
+footer #section-socialMedia .container a {
+    color:aliceblue;
+    text-align: center;
+    width: 100px;
+    font-size: 30px;
+    padding: 15px 0;
+    display: block;
+    margin: 0 20px;
+    border-radius: 3px;
+}
+
+footer #section-socialMedia .container .facebook:hover{
+    background:blue;
+}
+
+footer #section-socialMedia .container .youtube:hover{
+    background: #cd201f;
+}
+
+footer #section-socialMedia .container .github:hover{
+    background: #666666;
 }
