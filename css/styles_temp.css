@@ -45,7 +45,6 @@ header .container-text .text{
     border-radius: 15px;
     text-align:center;
     padding: 40px;
-/*    backdrop-filter: blur(5px); */
 }
 
 header .container-text .text h1,
@@ -72,7 +71,6 @@ header .container-text .text .name{
 header .container-text .text .profession{
     color: #ccc;
     font-size: 1.2rem;
-    /*line-height: 20px; */
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
@@ -110,9 +108,6 @@ main{
     color:white;
 }
 
-footer{
-    background-color: blue;
-}
 .container{
     max-width: 1100px;
     margin: 0 auto;
@@ -261,7 +256,6 @@ main #section-skills .container-skills{
 main #section-skills .container-skills .skill{
     margin: clamp(5px, 5px, 10px);
     display: flex;
-    align-items: justify-content;
     width: 23%;
 }
 
@@ -293,7 +287,6 @@ main #section-skills .container-skills .skill .icon-skill i:hover{
 footer{
     background: gainsboro;
     color:brown;
-    padding: 0px 0px;
 }
 
 footer #section-contact{
@@ -389,6 +382,17 @@ footer #section-socialMedia .container .github:hover{
 @media screen and (max-width: 768px) {
     header .menu {
         text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header .menu a {
+        margin: 0;
+        width: auto;
+        min-width: 120px;
     }
 
     main #section-jobs .container-jobs .job {
