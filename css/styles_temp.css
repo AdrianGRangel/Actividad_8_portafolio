@@ -69,7 +69,7 @@ header .container-text .text .name{
     line-height:50px;
 }
 
-header .container-text .text .progession{
+header .container-text .text .profession{
     color: #ccc;
     font-size: 1.2rem;
     /*line-height: 20px; */
@@ -384,4 +384,37 @@ footer #section-socialMedia .container .youtube:hover{
 
 footer #section-socialMedia .container .github:hover{
     background: #666666;
+}
+
+@media screen and (max-width: 768px) {
+    header .menu {
+        text-align: center;
+    }
+
+    main #section-jobs .container-jobs .job {
+        width: 48%;
+    }
+
+    main #section-skills .container-skills .skill {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .container-text .text .name {
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+    header .container-text .text .profession {
+        font-size: 18px;
+    }
+
+    footer #section-socialMedia .container {
+        flex-wrap: wrap;
+    }
+
+    footer #section-socialMedia .container a {
+        padding: 20px;
+    }
 }
